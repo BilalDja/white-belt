@@ -1,5 +1,5 @@
 import Mocha from 'mocha';
-import tests from './tests/subtests.example';
+import tests from './tests/subtests';
 import path from 'path';
 
 const config = () => {

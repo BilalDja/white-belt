@@ -1,18 +1,19 @@
 {
   "name": "white-belt",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Express typescript boilerplate project that gives you a boost and a nice workflow",
   "main": "index.js",
   "scripts": {
     "gen-env": "gen-env-types .env -o src/types/env.d.ts -e .",
     "test": "nodemon -r dotenv-safe/config tests.ts",
     "dev": "nodemon -r dotenv-safe/config src/index.ts",
-    "build": "tsc",
+    "clean": "rd /s /q dist >nul 2>&1|echo.>nul",
+    "build": "yarn clean && tsc",
     "start": "node -r dotenv-safe/config dist/index.js"
   },
   "keywords": ["Express", "Typescript", "Boilerplate", "Mocha"],
   "author": "BILAL Djaghout <b.djaghout@gmail.com",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@types/chai": "^4.2.12",
     "@types/express": "^4.17.8",
